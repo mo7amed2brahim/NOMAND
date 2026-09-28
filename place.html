@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nomad — Place detail</title>
+<meta name="description" content="Place detail page: photo gallery, comprehensive summary and feedbacks & reviews." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+</head>
+<body data-page="place">
+<div class="page">
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Nomad home"><span class="logo-mark">◍</span><span class="logo-word">Nomad</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="destinations.html" class="active">Destinations</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="guides.html">Guides</a>
+        <a href="plan.html" class="nav-cta-mobile">Plan my trip</a>
+      </div>
+      <div class="nav-right">
+        <a href="plan.html" class="btn btn-terra btn-small hide-mobile">Plan my trip</a>
+        <button class="profile-chip" aria-label="User profile for Mohamed">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Mohamed avatar" />
+          <span>Mohamed</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="place-cover">
+    <img id="dCover" src="" alt="" />
+    <span class="shade"></span>
+    <div class="in">
+      <p class="wall-kicker">Destination detail</p>
+      <h1 id="dTitle">Title</h1>
+      <p id="dSub">Subtitle</p>
+    </div>
+  </div>
+
+  <main class="section">
+    <a class="back-link" href="destinations.html">← All destinations</a>
+    <div class="gallery" style="margin-top:1rem">
+      <img id="gMain" src="" alt="Destination gallery main photo" style="width:100%;height:340px;object-fit:cover;border-radius:16px;border:1px solid var(--line)" />
+      <div class="thumbs" id="gThumbs"></div>
+    </div>
+    <div class="d-info" id="dInfo"></div>
+    <h2>Overview</h2>
+    <p class="muted" id="dOverview"></p>
+    <h3>Highlights</h3>
+    <ul class="ticks" id="dHighlights"></ul>
+    <div class="booking card">
+      <h3>Booking Options</h3>
+      <div class="book-opts">
+        <label class="book-opt"><input type="radio" name="btype" value="private" checked />
+          <div><strong>Private booking</strong><small>Instant confirmation • just you and your guide</small><b id="privPrice"></b></div>
+        </label>
+        <label class="book-opt"><input type="radio" name="btype" value="group" />
+          <div><strong>Join an open group</strong><small>Lower price • confirmed when the group reaches 5 people</small><b id="grpPrice"></b></div>
+        </label>
+      </div>
+      <div class="group-box" id="groupBox">
+        <div class="group-top"><span id="groupLabel"></span><span class="status-pill" id="groupPill"></span></div>
+        <div class="progress"><i id="groupBar"></i></div>
+        <div class="group-row">
+          <label>Seats <select id="groupSeats"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+          <span class="muted small" id="groupHint"></span>
+        </div>
+      </div>
+      <p class="my-booking hidden" id="myBooking"></p>
+      <div class="d-actions">
+        <button class="btn btn-terra" id="dBook">Confirm booking</button>
+        <a class="btn btn-ghost" href="plan.html">Plan with a guide →</a>
+      </div>
+    </div>
+    <hr class="sep" />
+    <h2>Feedbacks &amp; Reviews <span class="avg" id="dAvg"></span></h2>
+    <div class="reviews" id="dReviews"></div>
+    <form class="review-form" id="reviewForm">
+      <h3>Add your feedback, Mohamed</h3>
+      <div class="stars-input" id="starsInput" role="radiogroup" aria-label="Your rating">
+        <button type="button" data-v="1">★</button><button type="button" data-v="2">★</button><button type="button" data-v="3">★</button><button type="button" data-v="4">★</button><button type="button" data-v="5" class="on">★</button>
+      </div>
+      <label>Your review<textarea id="reviewText" rows="3" placeholder="What did you love? e.g. sunrise at the Sphinx was unreal…" required></textarea></label>
+      <button class="btn btn-aqua" type="submit">Post review</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div><span class="logo-word">Nomad</span><p class="muted">Bright journeys across Egypt. Made with sun in Cairo.</p></div>
+      <div class="foot-links"><a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="experiences.html">Experiences</a><a href="guides.html">Guides</a><a href="plan.html">Plan my trip</a><a href="about.html">About Us</a><a href="privacy.html">Privacy Policy</a></div>
+      <p class="copy">© 2026 Nomad • Light Mode only • Cream &amp; sunshine edition</p>
+    </div>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="site.js"></script>
+</body>
+</html>
