@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nomad — Tourist SIM cards in Egypt</title>
+<meta name="description" content="Local tourist SIM options in Egypt plus Nomad's paid concierge service to secure and deliver your line." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📶</text></svg>">
+</head>
+<body data-page="sim">
+<div class="page">
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Nomad home"><span class="logo-mark">◍</span><span class="logo-word">Nomad</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="guides.html">Guides</a>
+        <a href="plan.html" class="nav-cta-mobile">Plan my trip</a>
+      </div>
+      <div class="nav-right">
+        <a href="plan.html" class="btn btn-terra btn-small hide-mobile">Plan my trip</a>
+        <button class="profile-chip" aria-label="User profile for Mohamed">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Mohamed avatar" />
+          <span>Mohamed</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?q=80&w=2000&auto=format&fit=crop" alt="Cairo at golden hour" />
+    <span class="shade"></span>
+    <div class="in">
+      <h1>Stay connected, Mohamed.</h1>
+      <p>Tourist SIM options in Egypt + Nomad concierge delivery to your hotel or the airport.</p>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Tourist lines • passport registration required</p>
+        <h2>Local SIM options</h2>
+        <p class="muted">Buy at airport stores (Cairo T2/T3, Sharm, Hurghada) with your passport — or let us handle everything.</p>
+      </div>
+    </div>
+    <div class="grid sim-grid">
+      <article class="card guide sim-op">
+        <div class="big">📱 Vodafone</div>
+        <h3>Tourist Line • 30 GB</h3>
+        <p class="muted">15 days • 4G/5G • local minutes + WhatsApp bundle</p>
+        <ul><li>Available at Cairo airport arrival hall</li><li>eSIM supported on new iPhones</li><li>Top-up at any kiosk</li></ul>
+        <div class="guide-foot"><strong>from $22</strong><span class="cred-badge light">Most popular</span></div>
+      </article>
+      <article class="card guide sim-op">
+        <div class="big">📶 Orange</div>
+        <h3>Holiday Pack • 20 GB</h3>
+        <p class="muted">14 days • strong Sinai &amp; Red Sea coverage</p>
+        <ul><li>Stores in Sharm &amp; Hurghada airports</li><li>Free calls to 10 countries</li><li>Hotspot allowed</li></ul>
+        <div class="guide-foot"><strong>from $18</strong><span class="cred-badge aqua">Best for divers</span></div>
+      </article>
+      <article class="card guide sim-op">
+        <div class="big">📡 e&amp;</div>
+        <h3>Visitor Pack • 50 GB</h3>
+        <p class="muted">28 days • fastest Cairo–Alex corridor speeds</p>
+        <ul><li>Big-data option for hotspotting laptops</li><li>Airport + mall stores nationwide</li><li>English app &amp; support</li></ul>
+        <div class="guide-foot"><strong>from $30</strong><span class="cred-badge gold">Max data</span></div>
+      </article>
+    </div>
+
+    <div class="req-box">
+      <h3>What you need to know</h3>
+      <ul class="ticks">
+        <li>✔ Passport required — lines are registered to you in store (5 minutes)</li>
+        <li>✔ Prices are indicative and confirmed in store — never pay street touts</li>
+        <li>✔ eSIM available for compatible phones; physical nano-SIM otherwise</li>
+        <li>✔ Coverage: 4G everywhere tourists go; 5G in Cairo, Giza &amp; North Coast</li>
+      </ul>
+    </div>
+
+    <div class="concierge" id="concierge">
+      <div>
+        <p class="kicker">Nomad concierge • $15 flat</p>
+        <h2>We secure &amp; deliver your SIM</h2>
+        <p class="muted">Skip the airport queue. We buy the line, register it on your passport copy, and hand it to you — activated — at your hotel lobby or arrivals hall.</p>
+        <ul class="ticks">
+          <li>✔ Registered + activated before you land</li>
+          <li>✔ Delivery in Cairo, Giza, Sharm &amp; Hurghada</li>
+          <li>✔ Pay $15 on delivery (SIM price paid in store receipt)</li>
+          <li>✔ WhatsApp us anytime on hotline <b>19772</b></li>
+        </ul>
+      </div>
+      <form id="simForm">
+        <label>Full name<input type="text" id="simName" value="Mohamed" required /></label>
+        <label>Package
+          <select id="simPack">
+            <option>Vodafone Tourist 30 GB — from $22</option>
+            <option>Orange Holiday 20 GB — from $18</option>
+            <option>e&amp; Visitor 50 GB — from $30</option>
+          </select>
+        </label>
+        <label>Deliver to
+          <select id="simWhere">
+            <option>Cairo airport arrivals (T3)</option>
+            <option>Hotel lobby — Cairo / Giza</option>
+            <option>Sharm el-Sheikh airport</option>
+            <option>Hurghada airport / hotel</option>
+          </select>
+        </label>
+        <label>Arrival date<input type="date" id="simDate" value="2026-10-15" /></label>
+        <button class="btn btn-terra btn-large" type="submit">Request concierge — $15 →</button>
+        <p class="done hidden" id="simDone"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div><span class="logo-word">Nomad</span><p class="muted">Bright journeys across Egypt. Made with sun in Cairo.</p></div>
+      <div class="foot-links"><a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="experiences.html">Experiences</a><a href="guides.html">Guides</a><a href="plan.html">Plan my trip</a><a href="about.html">About Us</a><a href="privacy.html">Privacy Policy</a><a href="sim.html">Tourist SIM</a></div>
+      <p class="copy">© 2026 Nomad • Light Mode only • Cream &amp; sunshine edition</p>
+    </div>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="site.js"></script>
+</body>
+</html>
