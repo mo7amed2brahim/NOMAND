@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nomad — Plan my trip</title>
+<meta name="description" content="Trip planner: live cost calculator with transparent breakdown plus real-time chat with certified Egyptian guides." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+</head>
+<body data-page="plan">
+<div class="page">
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Nomad home"><span class="logo-mark">◍</span><span class="logo-word">Nomad</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="guides.html">Guides</a>
+        <a href="plan.html" class="nav-cta-mobile">Plan my trip</a>
+      </div>
+      <div class="nav-right">
+        <a href="plan.html" class="btn btn-terra btn-small hide-mobile">Plan my trip</a>
+        <button class="profile-chip" aria-label="User profile for Mohamed">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Mohamed avatar" />
+          <span>Mohamed</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=2000&auto=format&fit=crop" alt="Golden desert dunes at sunset" />
+    <span class="shade"></span>
+    <div class="in">
+      <h1>Plan my trip, Mohamed.</h1>
+      <p>Live pricing as you tweak people, days and places — then chat and negotiate with a real guide.</p>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="plan-grid">
+      <div class="card planner">
+        <h3>1 · Your program</h3>
+        <p class="muted small">Total updates live on the right.</p>
+        <div class="stepper-row">
+          <div class="stepper">
+            <span>Number of People <em>group / transport scaling</em></span>
+            <div class="step-ctrl"><button type="button" data-step="people:-1">−</button><strong id="peopleVal">2</strong><button type="button" data-step="people:1">+</button></div>
+          </div>
+          <div class="stepper">
+            <span>Number of Days <em>hotel + daily baseline</em></span>
+            <div class="step-ctrl"><button type="button" data-step="days:-1">−</button><strong id="daysVal">3</strong><button type="button" data-step="days:1">+</button></div>
+          </div>
+        </div>
+        <h4>2 · Selected Places <em class="muted small">tickets &amp; fees per person</em></h4>
+        <div id="placeChecks"></div>
+        <div class="row2">
+          <label>Start date<input type="date" id="tripDate" value="2026-10-15" /></label>
+          <label>Notes<input type="text" id="tripNotes" placeholder="e.g. sunrise temples, vegetarian…" /></label>
+        </div>
+        <h4>3 · Your certified guide <em class="muted small">also your chat partner</em></h4>
+        <div class="guide-pick" id="guidePick"></div>
+      </div>
+
+      <div class="plan-side">
+        <div class="card breakdown" aria-live="polite">
+          <h3>Transparent breakdown</h3>
+          <div class="b-row"><span>Base Rate <small id="baseDetail"></small></span><strong id="baseVal"></strong></div>
+          <div class="b-row"><span>Places / Tickets Fee <small id="ticketDetail"></small></span><strong id="ticketVal"></strong></div>
+          <div class="b-row"><span>Guide Consultation Fee <small id="guideDetail"></small></span><strong id="guideVal"></strong></div>
+          <div class="b-row hidden" id="loyalRow"><span>Loyalty discount <small id="loyalDetail"></small></span><strong id="loyalVal"></strong></div>
+          <p class="discount-note hidden" id="discountNote">✔ 10% chat-negotiated guide discount applied</p>
+          <div class="b-total"><span>Final Total Price <small id="perPerson"></small></span><strong id="totalVal"></strong></div>
+          <button class="btn btn-terra btn-large" id="confirmTrip">Confirm trip →</button>
+          <button class="btn btn-ghost btn-large" id="saveProgram" style="margin-top:.5rem">Save program ♡</button>
+          <p class="form-note" id="formNote"></p>
+        </div>
+
+        <div class="card chat" id="chatCard">
+          <div class="chat-head">
+            <img id="chatAvatar" src="" alt="Guide avatar" />
+            <div><strong id="chatName"></strong><span class="online"><i></i> Online • replies in ~1 min • certified</span></div>
+            <span class="chat-rate" id="chatRate"></span>
+          </div>
+          <div class="chat-msgs" id="chatMsgs" aria-live="polite"></div>
+          <div class="quick"><button type="button" data-quick="What's included in my total?">What's included?</button><button type="button" data-quick="Can you lower the price a bit?">Negotiate price</button><button type="button" data-quick="Are you free on my date?">Check availability</button></div>
+          <form class="chat-input" id="chatForm"><input id="chatText" type="text" placeholder="Talk to your guide directly…" autocomplete="off" /><button class="btn btn-terra" type="submit">Send</button></form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div><span class="logo-word">Nomad</span><p class="muted">Bright journeys across Egypt. Made with sun in Cairo.</p></div>
+      <div class="foot-links"><a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="experiences.html">Experiences</a><a href="guides.html">Guides</a><a href="plan.html">Plan my trip</a><a href="about.html">About Us</a><a href="privacy.html">Privacy Policy</a></div>
+      <p class="copy">© 2026 Nomad • Light Mode only • Cream &amp; sunshine edition</p>
+    </div>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="site.js"></script>
+</body>
+</html>
