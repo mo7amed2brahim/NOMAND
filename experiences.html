@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nomad — Experiences in Egypt</title>
+<meta name="description" content="Special Egyptian activities: Red Sea diving, Arabian nights, Nile cruises, desert safari." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+</head>
+<body data-page="experiences">
+<div class="page">
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Nomad home"><span class="logo-mark">◍</span><span class="logo-word">Nomad</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="experiences.html" class="active">Experiences</a>
+        <a href="guides.html">Guides</a>
+        <a href="plan.html" class="nav-cta-mobile">Plan my trip</a>
+      </div>
+      <div class="nav-right">
+        <a href="plan.html" class="btn btn-terra btn-small hide-mobile">Plan my trip</a>
+        <button class="profile-chip" aria-label="User profile for Mohamed">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Mohamed avatar" />
+          <span>Mohamed</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2000&auto=format&fit=crop" alt="Diver over a Red Sea coral reef" />
+    <span class="shade"></span>
+    <div class="in">
+      <h1>Experiences, Mohamed.</h1>
+      <p>Diving, lantern-lit nights, slow sails and big dunes — pick your thrill.</p>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="grid journeys exp-grid" id="expGrid">
+      <article class="card exp">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop" alt="Red Sea diving over coral" loading="lazy" /><span class="badge-float aqua">Sea</span><span class="price">$199 • 2 dives</span></div>
+        <div class="card-body"><h3>Red Sea Diving</h3><p>Blue Hole walls, turtle bays and Ras Mohamed drop-offs with PADI masters. All gear included.</p>
+        <div class="exp-steps"><span>🤿 PADI intro</span><span>🐢 Turtles</span><span>⛵ Boat lunch</span></div>
+        <div class="card-actions"><a class="linklike" href="place.html?place=bluehole">View destination</a><a class="btn btn-terra btn-small" href="plan.html">Plan →</a></div></div>
+      </article>
+      <article class="card exp">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=800&auto=format&fit=crop" alt="Lantern-lit bazaar at night" loading="lazy" /><span class="badge-float">Night</span><span class="price">$79 • 1 evening</span></div>
+        <div class="card-body"><h3>Arabian Nights</h3><p>Khan el-Khalili lamps, Al-Muizz minarets, koshary queues and rooftop mint tea with a Cairene insider.</p>
+        <div class="exp-steps"><span>🌙 Bazaar walk</span><span>🍢 Tastings</span><span>📸 Rooftop</span></div>
+        <div class="card-actions"><a class="linklike" href="place.html?place=khan">View destination</a><a class="btn btn-terra btn-small" href="plan.html">Plan →</a></div></div>
+      </article>
+      <article class="card exp">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?q=80&w=800&auto=format&fit=crop" alt="Ancient temple on the Nile route" loading="lazy" /><span class="badge-float gold">River</span><span class="price">$599 • 4 nights</span></div>
+        <div class="card-body"><h3>Nile River Cruises</h3><p>Luxor → Aswan by wind-powered dahabiya: Karnak, Valley of the Kings, Edfu and Kom Ombo, full board.</p>
+        <div class="exp-steps"><span>⛵ Dahabiya</span><span>🏛 4 temples</span><span>🍽 Full board</span></div>
+        <div class="card-actions"><a class="linklike" href="place.html?place=karnak">View destination</a><a class="btn btn-terra btn-small" href="plan.html">Plan →</a></div></div>
+      </article>
+      <article class="card exp">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=800&auto=format&fit=crop" alt="Golden desert dunes" loading="lazy" /><span class="badge-float sand">Desert</span><span class="price">$289 • 2 nights</span></div>
+        <div class="card-body"><h3>Desert Safari</h3><p>Siwa salt lakes, Great Sand Sea 4x4, sandboarding and dinner under the Milky Way.</p>
+        <div class="exp-steps"><span>🏜 4x4 dunes</span><span>🏄 Sandboarding</span><span>✨ Stargazing</span></div>
+        <div class="card-actions"><a class="linklike" href="place.html?place=siwa">View destination</a><a class="btn btn-terra btn-small" href="plan.html">Plan →</a></div></div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div><span class="logo-word">Nomad</span><p class="muted">Bright journeys across Egypt. Made with sun in Cairo.</p></div>
+      <div class="foot-links"><a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="experiences.html">Experiences</a><a href="guides.html">Guides</a><a href="plan.html">Plan my trip</a><a href="about.html">About Us</a><a href="privacy.html">Privacy Policy</a></div>
+      <p class="copy">© 2026 Nomad • Light Mode only • Cream &amp; sunshine edition</p>
+    </div>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="site.js"></script>
+</body>
+</html>
