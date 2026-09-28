@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nomad — Discover the Endless Wonders of Egypt</title>
+<meta name="description" content="Nomad is a bright, sunny travel platform for Egypt. Home: dynamic wallpaper, search, featured places, journeys and guides." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+</head>
+<body data-page="home">
+<div class="page">
+
+  <section class="hero" id="destinations" aria-label="Egypt highlights">
+    <div class="wall" id="wall" aria-hidden="true">
+      <div class="wall-slide active"><img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=2000&auto=format&fit=crop" alt="" loading="eager" /></div>
+      <div class="wall-slide"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2000&auto=format&fit=crop" alt="" loading="lazy" /></div>
+      <div class="wall-slide"><img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=2000&auto=format&fit=crop" alt="" loading="lazy" /></div>
+      <div class="wall-slide"><img src="https://images.unsplash.com/photo-1539768942893-daf53e448371?q=80&w=2000&auto=format&fit=crop" alt="" loading="lazy" /></div>
+      <div class="wall-shade"></div>
+    </div>
+
+    <header class="nav-wrap">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="index.html" aria-label="Nomad home"><span class="logo-mark">◍</span><span class="logo-word">Nomad</span></a>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="active">Home</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="experiences.html">Experiences</a>
+          <a href="guides.html">Guides</a>
+          <a href="plan.html" class="nav-cta-mobile">Plan my trip</a>
+        </div>
+        <div class="nav-right">
+          <a href="plan.html" class="btn btn-terra btn-small hide-mobile">Plan my trip</a>
+          <button class="profile-chip" aria-label="User profile for Mohamed">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Mohamed avatar" />
+            <span>Mohamed</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-inner">
+      <p class="eyebrow"><span class="sun-dot"></span> Sunny in Cairo • 31°C • Perfect for pyramids today</p>
+      <h1 id="heroTitle">Discover the Endless Wonders of Egypt, Mohamed.</h1>
+      <p class="sub">From Giza at sunrise to coral gardens in Dahab — search, explore plates, chat with real guides.</p>
+      <form class="searchbar" id="searchForm" role="search">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="What secret of Egypt do you wish to uncover, Mohamed?" aria-label="Search Egypt experiences" />
+        <button type="submit" class="btn btn-terra">Search</button>
+      </form>
+      <div class="search-tags">
+        <button type="button" data-q="pyramids">Pyramids</button>
+        <button type="button" data-q="diving">Red Sea diving</button>
+        <button type="button" data-q="bazaar">Khan el-Khalili</button>
+        <button type="button" data-q="nile">Nile cruise</button>
+      </div>
+      <div class="wall-caption">
+        <p class="wall-kicker" id="wallKicker">1 / 4 — Now showing</p>
+        <h2 class="wall-title" id="wallTitle">Ancient Egypt</h2>
+        <p class="wall-sub" id="wallSub">Pyramids &amp; Temples</p>
+      </div>
+      <div class="wall-controls">
+        <button class="ctrl prev" id="prevBtn" aria-label="Previous wallpaper">‹ <span>Previous</span></button>
+        <div class="dots" id="dots" role="tablist" aria-label="Choose wallpaper"></div>
+        <button class="ctrl next" id="nextBtn" aria-label="Next wallpaper"><span>Next</span> ›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="featured">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Featured • tap a plate</p>
+        <h2>Where to first, Mohamed?</h2>
+        <p class="muted">Each plate opens its own detail page — gallery, overview, feedbacks &amp; reviews.</p>
+      </div>
+      <a href="destinations.html" class="btn btn-aqua">All 10 destinations</a>
+    </div>
+    <div class="grid plates">
+      <a class="plate" href="place.html?place=pyramids">
+        <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=900&auto=format&fit=crop" alt="Pyramids of Giza and Sphinx" loading="lazy" />
+        <span class="plate-shade"></span>
+        <span class="plate-text"><strong>Pyramids of Giza &amp; Sphinx</strong><em>Ancient wonder • Giza plateau</em><span class="plate-open">Open detail →</span></span>
+      </a>
+      <a class="plate" href="place.html?place=bluehole">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=900&auto=format&fit=crop" alt="Diver over coral reef in Dahab Blue Hole" loading="lazy" />
+        <span class="plate-shade"></span>
+        <span class="plate-text"><strong>Dahab Blue Hole</strong><em>Coral sinkhole • Red Sea</em><span class="plate-open">Open detail →</span></span>
+      </a>
+      <a class="plate" href="place.html?place=khan">
+        <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=900&auto=format&fit=crop" alt="Lantern-lit Khan el-Khalili bazaar" loading="lazy" />
+        <span class="plate-shade"></span>
+        <span class="plate-text"><strong>Khan el-Khalili</strong><em>Historic bazaar • Cairo</em><span class="plate-open">Open detail →</span></span>
+      </a>
+      <a class="plate" href="place.html?place=siwa">
+        <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=900&auto=format&fit=crop" alt="Golden dunes near Siwa Oasis" loading="lazy" />
+        <span class="plate-shade"></span>
+        <span class="plate-text"><strong>Siwa Oasis</strong><em>Salt lakes • Western Desert</em><span class="plate-open">Open detail →</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats-inner">
+      <div><strong>240+</strong><span>Curated stays &amp; journeys</span></div>
+      <div><strong>4.9 ★</strong><span>From 12k happy travelers</span></div>
+      <div><strong>120</strong><span>Verified local experts</span></div>
+      <div><strong>100%</strong><span>Light, bright &amp; easy booking</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="journeys">
+    <div class="section-head">
+      <div>
+        <p class="kicker">Curated journeys</p>
+        <h2>Pre-planned packages, golden-hour ready</h2>
+        <p class="muted">High-res inspiration, honest prices, instant booking.</p>
+      </div>
+      <a href="experiences.html" class="btn btn-aqua">All experiences</a>
+    </div>
+    <div class="grid journeys">
+      <article class="card journey">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=800&auto=format&fit=crop" alt="Nile Delta Voyage pyramids" loading="lazy" /><span class="badge-float">Bestseller</span><span class="price">$349 • 3 days</span></div>
+        <div class="card-body"><h3>Nile Delta Voyage</h3><p>Cairo → Giza → Saqqara. Sunrise at the Sphinx, Grand Museum, felucca at dusk.</p>
+        <div class="meta"><span>★ 4.9 (1.2k)</span><span>•</span><span>Small group</span></div>
+        <div class="card-actions"><a class="linklike" href="place.html?place=pyramids">View place</a><button class="btn btn-terra btn-small book-btn">Book</button></div></div>
+      </article>
+      <article class="card journey">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=800&auto=format&fit=crop" alt="Sahara Nights desert dunes" loading="lazy" /><span class="badge-float sand">Desert camp</span><span class="price">$289 • 2 nights</span></div>
+        <div class="card-body"><h3>Sahara Nights</h3><p>White Desert &amp; Siwa Oasis. Bedouin dinner, stargazing, salt-lake float.</p>
+        <div class="meta"><span>★ 4.8 (860)</span><span>•</span><span>4x4 + guide</span></div>
+        <div class="card-actions"><a class="linklike" href="place.html?place=siwa">View place</a><button class="btn btn-terra btn-small book-btn">Book</button></div></div>
+      </article>
+      <article class="card journey">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=800&auto=format&fit=crop" alt="Red Sea turtle" loading="lazy" /><span class="badge-float aqua">Diving</span><span class="price">$199 • 2 dives</span></div>
+        <div class="card-body"><h3>Red Sea Coral Escape</h3><p>Dahab Blue Hole + Sharm reefs. PADI intro, turtles, beach lunch.</p>
+        <div class="meta"><span>★ 5.0 (640)</span><span>•</span><span>All gear incl.</span></div>
+        <div class="card-actions"><a class="linklike" href="place.html?place=bluehole">View place</a><button class="btn btn-terra btn-small book-btn">Book</button></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section ivory" id="guidesPrev">
+    <div class="section-head">
+      <div>
+        <p class="kicker aqua">Local experts</p>
+        <h2>Book verified Egyptian guides</h2>
+        <p class="muted">Egyptologists, divers and foodies — licensed, reviewed, ready in your language.</p>
+      </div>
+      <a href="guides.html" class="btn btn-aqua">All guides</a>
+    </div>
+    <div class="grid guides">
+      <article class="card guide">
+        <div class="guide-top"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop" alt="Ahmed Rudi portrait" loading="lazy" />
+        <div><h3>Ahmed Rudi <span class="verified">✔</span></h3><p class="role">Certified Egyptologist • Cairo / Giza</p><p class="stars">★★★★★ <span>5.0 • 412 reviews</span></p></div></div>
+        <div class="tags"><span>Hieroglyphs</span><span>Private van</span><span>EN / AR / DE</span></div>
+        <div class="cred"><span class="cred-badge">Ministry Licensed</span><span class="cred-badge light">10 yrs</span></div>
+        <div class="guide-foot"><strong>$45 / day</strong><a class="btn btn-terra btn-small" href="plan.html?guide=ahmed">Chat →</a></div>
+      </article>
+      <article class="card guide">
+        <div class="guide-top"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&auto=format&fit=crop" alt="Salma El-Nour portrait" loading="lazy" />
+        <div><h3>Salma El-Nour <span class="verified">✔</span></h3><p class="role">Red Sea Dive Master • Dahab</p><p class="stars">★★★★★ <span>5.0 • 298 reviews</span></p></div></div>
+        <div class="tags"><span>PADI</span><span>Free-diving</span><span>EN / AR / FR</span></div>
+        <div class="cred"><span class="cred-badge aqua">PADI Certified</span><span class="cred-badge light">8 yrs</span></div>
+        <div class="guide-foot"><strong>$60 / day</strong><a class="btn btn-terra btn-small" href="plan.html?guide=salma">Chat →</a></div>
+      </article>
+      <article class="card guide">
+        <div class="guide-top"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop" alt="Omar Fathy portrait" loading="lazy" />
+        <div><h3>Omar Fathy <span class="verified">✔</span></h3><p class="role">Food &amp; Bazaar Insider • Cairo</p><p class="stars">★★★★☆ <span>4.9 • 531 reviews</span></p></div></div>
+        <div class="tags"><span>Street food</span><span>Photography</span><span>EN / AR / ES</span></div>
+        <div class="cred"><span class="cred-badge gold">Top Rated</span><span class="cred-badge light">6 yrs</span></div>
+        <div class="guide-foot"><strong>$30 / tour</strong><a class="btn btn-terra btn-small" href="plan.html?guide=omar">Chat →</a></div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-inner">
+      <div><span class="logo-word">Nomad</span><p class="muted">Bright journeys across Egypt. Made with sun in Cairo.</p></div>
+      <div class="foot-links"><a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="experiences.html">Experiences</a><a href="guides.html">Guides</a><a href="plan.html">Plan my trip</a><a href="about.html">About Us</a><a href="privacy.html">Privacy Policy</a></div>
+      <p class="copy">© 2026 Nomad • Light Mode only • Cream &amp; sunshine edition</p>
+    </div>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="site.js"></script>
+</body>
+</html>
